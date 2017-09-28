@@ -1,9 +1,9 @@
 require 'torch'
-require 'cutorch'
+--require 'cutorch'
 require 'nn'
 require 'nngraph'
-require 'cunn'
-require 'cudnn'
+--require 'cunn'
+--require 'cudnn'
 require 'drivers.CallbackQueue'
 
 local args = require 'args'
@@ -35,7 +35,7 @@ else
   model = get_trijoint(opts)
 end
 
-model:cuda()
+--model:cuda()
 model:training()
 if opts.test then
   opts.nworkers = 1
